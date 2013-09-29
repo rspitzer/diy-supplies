@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8"/>
+
+		<title>Testing in AngularJS</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Cookie|Open+Sans:400,700" rel="stylesheet" />
+
+		<link href="style.css" rel="stylesheet" />
+
+	</head>
+
+
+
+
+	<body ng-app="diySupplies" ng-controller="diySuppliesController">
+
+
+		<ul>
+		  <li ng-repeat="item in items">{{item.name}}: {{item.desc}}</li>
+		</ul>
+
+
+		<form>
+		  <input type="text" ng-model="item.name" placeholder="Name" />
+		  <input type="text" ng-model="item.desc" placeholder="Description" />
+		  <button name="test" ng-click="addItem()" />
+		</form>
+
+
+
+		<script src="script.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		
+		<script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.js"></script>
+
+	</body>
+</html>
